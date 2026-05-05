@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WEI · 命盤深度報告</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--ink:#1e1b18;--cream:#faf7f2;--parchment:#f4efe6;--gold:#a07830;--gold-l:#c9a55a;--border:#e4ddd4;--gray:#8c857d;--white:#fff;}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);}
+.cover{background:linear-gradient(150deg,#1a1410 0%,#2c1e16 55%,#3a2820 100%);padding:52px 36px 44px;position:relative;overflow:hidden;}
+.cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 15% 30%,rgba(160,120,48,.15) 0%,transparent 60%),radial-gradient(ellipse at 85% 75%,rgba(138,74,90,.1) 0%,transparent 60%);pointer-events:none;}
+.ci{max-width:680px;margin:0 auto;position:relative;}
+.eyebrow{font-size:10px;letter-spacing:3px;color:rgba(201,165,90,.7);text-transform:uppercase;margin-bottom:16px;}
+.cname{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,54px);color:#f5f0e8;font-weight:700;line-height:1.1;margin-bottom:6px;}
+.csub{font-size:12px;color:rgba(245,240,232,.45);letter-spacing:1px;margin-bottom:26px;}
+.ctags{display:flex;gap:7px;flex-wrap:wrap;}
+.ctag{padding:4px 13px;border-radius:20px;font-size:11px;border:1px solid rgba(245,240,232,.15);color:rgba(245,240,232,.6);}
+.ctag.g{border-color:rgba(201,165,90,.4);color:var(--gold-l);}
+.ctag.r{border-color:rgba(180,100,120,.4);color:#c08090;}
+.body{max-width:680px;margin:0 auto;padding:36px 20px 60px;}
+.ov{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px;}
+@media(max-width:500px){.ov{grid-template-columns:1fr;}}
+.oc{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 18px;}
+.oc-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:10px;}
+.oc-lbl.zw{color:var(--gold);} .oc-lbl.hd{color:#5a3f7a;}
+.oc-row{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;gap:8px;}
+.oc-k{color:var(--gray);flex-shrink:0;} .oc-v{font-weight:500;text-align:right;}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px;}
+.tag{padding:3px 8px;border-radius:12px;font-size:11px;font-weight:500;}
+.t-lu{background:#d4622a;color:#fff;} .t-quan{background:#2a6aad;color:#fff;}
+.t-ke{background:#2a8a5a;color:#fff;} .t-ji{background:#8a2a3a;color:#fff;}
+.t-fu{background:#f0ece4;color:#6a5a48;border:1px solid #ddd;} .t-xiong{background:#fdf0ee;color:#8a3a2a;border:1px solid #e8c0c0;}
+.t-def{background:var(--ink);color:#fff;} .t-undef{background:var(--parchment);color:var(--gray);border:1px solid var(--border);}
+.imgs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px;}
+@media(max-width:500px){.imgs{grid-template-columns:1fr;}}
+.img-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.img-lbl{padding:9px 14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border-bottom:1px solid var(--border);}
+.img-lbl.zw{color:var(--gold);} .img-lbl.hd{color:#5a3f7a;}
+.img-card img{width:100%;display:block;}
+.sec{margin-bottom:32px;}
+.sec-hd{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:11px;border-bottom:1px solid var(--border);}
+.sec-num{width:26px;height:26px;background:var(--ink);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;}
+.sec-title{font-family:'Noto Serif TC',serif;font-size:19px;font-weight:600;}
+.bl{border-radius:6px;padding:16px 18px;margin-bottom:10px;}
+.bl-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:9px;}
+.bl p{font-size:13.5px;line-height:1.9;font-weight:300;}
+.bl-zw{background:var(--white);border:1px solid var(--border);} .bl-zw .bl-lbl{color:var(--gold);}
+.bl-hd{background:#f8f5fc;border:1px solid #e0d8ec;} .bl-hd .bl-lbl{color:#5a3f7a;}
+.bl-int{background:linear-gradient(135deg,#1e1a16,#2c2018);} .bl-int .bl-lbl{color:var(--gold-l);} .bl-int p{color:rgba(245,240,232,.75);}
+.div{text-align:center;color:var(--border);letter-spacing:8px;font-size:14px;margin:24px 0;}
+.clos{background:var(--parchment);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px;}
+.clos p{font-size:13.5px;line-height:1.95;color:#5a4e3c;font-weight:300;}
+.foot{text-align:center;padding:18px;font-size:11.5px;color:var(--gray);border-top:1px solid var(--border);}
+
+/* MIC */
+.f-with-mic { position: relative; }
+.f-with-mic textarea { padding-right: 44px; }
+.mic-btn {
+  position: absolute; right: 8px; top: 8px;
+  width: 30px; height: 30px; border-radius: 50%;
+  border: none; background: var(--light);
+  color: var(--gray); font-size: 14px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s; flex-shrink: 0;
+}
+.mic-btn:hover { background: var(--gold-bg); color: var(--gold); }
+.mic-btn.recording {
+  background: #fee2e2; color: #dc2626;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(220,38,38,0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(220,38,38,0); }
+}
+.mic-toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  background: #1e1b18; color: #fff; padding: 8px 18px;
+  border-radius: 20px; font-size: 12px; font-weight: 500;
+  opacity: 0; transition: opacity 0.25s; pointer-events: none; z-index: 9999;
+  white-space: nowrap;
+}
+.mic-toast.show { opacity: 1; }
+</style></head><body>
+<div class="cover"><div class="ci">
+  <div class="eyebrow">命盤深度報告</div>
+  <div class="cname">WEI</div>
+  <div class="csub">1990/03/08　·　14:37</div>
+  <div class="ctags">
+    
+    <span class="ctag g">投射者</span>
+    <span class="ctag r">命盤深度報告</span>
+  </div>
+</div></div>
+<div class="body">
+<div class="ov">
+  <div class="oc">
+    <div class="oc-lbl zw">☆ 紫微命盤</div>
+    
+    
+    <div class="tags">
+      
+      <span class="tag t-xiong">火星</span>
+    </div>
+  </div>
+  <div class="oc">
+    <div class="oc-lbl hd">◎ 人類圖</div>
+    <div class="oc-row"><span class="oc-k">類型</span><span class="oc-v">投射者</span></div>
+    <div class="oc-row"><span class="oc-k">通道</span><span class="oc-v">13-33</span></div>
+    <div class="oc-row"><span class="oc-k">閘門</span><span class="oc-v">1・7・13・14・15・20・22・26・33・37・38・41・45・47・52・58・60・61</span></div>
+    <div style="margin-top:7px;font-size:10px;color:var(--gray);margin-bottom:4px;">有定義中心</div><div class="tags"><span class="tag t-def">🗣 喉嚨中心</span><span class="tag t-def">♡ G中心</span></div>
+    <div style="margin-top:5px;font-size:10px;color:var(--gray);margin-bottom:4px;">未定義中心</div><div class="tags"><span class="tag t-undef">🧠 頭腦中心</span><span class="tag t-undef">👁 邏輯中心</span><span class="tag t-undef">💪 意志力中心</span><span class="tag t-undef">🌊 情緒中心</span><span class="tag t-undef">⚡ 薦骨中心</span><span class="tag t-undef">🛡 直覺中心</span><span class="tag t-undef">🌿 根部中心</span></div>
+  </div>
+</div>
+
+<div class="sec"><div class="sec-hd"><div class="sec-num">01</div><span style="font-size:18px;">☆</span><div class="sec-title">個性 · 本質解析</div></div><div class="bl bl-zw"><div class="bl-lbl">☆ 紫微斗數</div><p>你對萬事萬物的包容性大，能接納各種想法，要留意有時會缺乏自己的原則，基本上為人重情重義且個性豪爽不拘小節，個性有時比較衝動急躁，留意情緒上來時會做出衝動的決定，但通常脾氣來的快去得快。基於內在的慾望，跟對金錢的焦慮、沒安全感，會積極在認真工作、賺錢，也善於存錢。你有閒不下來的特質，常出外奔波勞碌。<br>人生課題在於會過度在意外人對自己的看法，而迷失自我，好像都在為他人眼光而活。</p></div><div class="bl bl-hd"><div class="bl-lbl">◎ 人類圖補充</div><p>天生有內在的渴望，想傾聽他人的故事，也總是吸引他人敞開心房與你傾訴，你擅長累積跟收集經驗，透過自己的經歷，與思考淬鍊後，將你得到的收穫，無私的分享給他人你所得到的啟發，為的是避免更多人重蹈覆轍，犯同樣的錯。</p></div></div><div class="div">· · ·</div>
+<div class="sec"><div class="sec-hd"><div class="sec-num">02</div><span style="font-size:18px;">♡</span><div class="sec-title">感情 · 關係解析</div></div><div class="bl bl-zw"><div class="bl-lbl">☆ 紫微斗數</div><p>喜歡聰明、上進好學的對象，且比較不理智，很憑感覺，在跟伴侶有溝通不良的狀況，感情上也會有較多的變動。外界的觀感會覺得伴侶對你很好，感情讓人稱羨，但對方個性比較強勢，且很黏你，去到哪裡都要跟。</p></div><div class="bl bl-hd"><div class="bl-lbl">◎ 人類圖補充</div><p>你本質是可以接受每個人不同的樣子，有非常大愛的心態，但在感情中，會用挑剔對方的心態，或總覺得對方哪裡不足，需要改進修正，但底層的想法是你想要塑造一段完美的愛情，甚至希望自己的感情能像電影、小說中那些完美的場景、台詞。</p></div></div><div class="div">· · ·</div>
+<div class="sec"><div class="sec-hd"><div class="sec-num">03</div><span style="font-size:18px;">◈</span><div class="sec-title">財富 · 豐盛解析</div></div><div class="bl bl-zw"><div class="bl-lbl">☆ 紫微斗數</div><p>花錢、理財有時過於不拘小節、隨性，對金錢的態度樂觀，願意花錢享受生活，但對金錢有種矛盾感，知道自己要量入為出，但會有過度消費，莫名的支出金錢的情形，另外，你賺錢的點子多，願意身體力行去賺錢，財富大多靠自己努力去拚得社會地位伴隨而來。</p></div><div class="bl bl-hd"><div class="bl-lbl">◎ 人類圖補充</div><p>不適合一直埋頭苦幹，做越多賺越多的類型，你適合先被人看見你的價值，再將你的價值放大，你有自己的輸出能力，有能力把東西講清楚，也其實知道自己適合什麼，如果在還沒被看見價值前就苦幹實幹，會累死自己。</p></div></div><div class="div">· · ·</div>
+<div class="sec"><div class="sec-hd"><div class="sec-num">04</div><span style="font-size:18px;">◆</span><div class="sec-title">職涯 · 事業解析</div></div><div class="bl bl-zw"><div class="bl-lbl">☆ 紫微斗數</div><p>在工作上的溝通表達能力很好，適合做跟靠嘴說話的工作，工作讓你能滋養家族，且在職場上照顧同事，但在工作上也讓你勞心勞力，不得清閒，跟主管、長輩有緣，但會發生因感情而無心或耽誤工作的情形，或工作上有較多的變動。</p></div><div class="bl bl-hd"><div class="bl-lbl">◎ 人類圖補充</div><p>往善於回顧與整理經驗，也具備從他人故事中提煉意義、再以合適方式傳遞的天賦，蠻適合成為人生教練、人資、或作家/自媒體。</p></div></div><div class="div">· · ·</div>
+<div class="sec"><div class="sec-hd"><div class="sec-num">05</div><span style="font-size:18px;">⊕</span><div class="sec-title">健康 · 身心解析</div></div><div class="bl bl-zw"><div class="bl-lbl">☆ 紫微斗數</div><p>血光或刀傷、肺、氣管、呼吸道、過敏、皮膚、自律神經失調。</p></div><div class="bl bl-hd"><div class="bl-lbl">◎ 人類圖補充</div><p>你很容易覺得要趕快做完、趕快解決，長期下來身體會一直處在緊繃狀態，也容易吸收別人的情緒，久了變成壓力或身體疲勞，或過度想要證明自己的價值，而死命硬ㄍㄧㄥ</p></div></div>
+
+<div class="foot">RENEE　｜　紫微斗數 × 人類圖 整合解析　｜　2026/05</div>
+</div><div class="mic-toast" id="mic-toast"></div>
+</body></html>
